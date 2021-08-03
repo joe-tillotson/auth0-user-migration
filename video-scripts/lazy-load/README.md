@@ -1,1 +1,14 @@
 - Lazy load video script goes here
+    - what is it?
+    - why & when to use it?
+      - why: no down time for users (seamless experience)
+      - why: no need for users to reset their password (seamless)
+      - why: conceptually simple to implement and test
+      - when: bulk is not an option because user passwords cannot be exported
+      - when: bulk is not an option due to the potential need for legacy system down-time
+    - why not & when not to use it?
+      - why not: <finish>
+
+- Asset ideas:
+  - Data flow diagram (C4 level 4 - DFD) depicting interactions of actors in a typical lazy load migration implementation
+    - relate to the Lab
