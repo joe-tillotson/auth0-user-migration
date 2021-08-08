@@ -13,10 +13,11 @@ Setting up automatic migration starts with the use of a [custom database connect
 
 Let's look at a diagram that describes this approach:
 ### Decision diagram
-#### highlights the yes/no decisions that determine what action(s) will take place in Auth0 and/or the legacy authentication system
-[decision diagram](https://auth0.com/docs/users/import-and-export-users)
+This [decision diagram in Auth0 documentation](https://auth0.com/docs/users/import-and-export-users) highlights the yes/no decisions that determine what action(s) will take place in Auth0 and/or the legacy authentication system during automatic migration:
 
-#### diagram points to highlight:
+<img src="migrating-diagram.png" alt="Automatic migration diagram" style="height: 462px; width:418px;"/>
+
+#### Diagram points to highlight:
 - The initial decision is: "is the user already in Auth0's database?"
   - if yes, then either the user is new (signed up after Automatic Migration was configured & implemented), or has already been migrated
   - if no, then Auth0 reaches out to the legacy system / store to determine if the supplied credentials are valid
