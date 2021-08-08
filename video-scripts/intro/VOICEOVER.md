@@ -18,4 +18,4 @@ This is a diagram that follows the yes/no questions which help to choose which u
 Similar in concept to the diagram [located here](https://developer.okta.com/docs/concepts/oauth-openid/#what-kind-of-client-are-you-building) that helps to choose which OAuth2 grant type is best suited for a given application.
 
 ## Voice over dialog (continued)
-First, we'll look at how to migrate existing users into Auth0, and specifically the first 'sub-option', often referred to as Automatic or 'Lazy' user migration.
+First, let's look at how to migrate existing users into Auth0, and specifically the first 'sub-option', often referred to as Automatic or 'Lazy' user migration.
