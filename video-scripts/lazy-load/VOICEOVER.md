@@ -36,6 +36,9 @@ TODO: new DFD that highlights the interactions between auth0 and a legacy auth s
 ### Security
 It is typically considered a non-secure practice to directly expose a database connection to the Internet.  Therefore, it is recommended to utilize an API (e.g. a REST API) in front of the legacy system's database for access by the Auth0 Automatic Migration scripts.  This API can then be protected by utilizing one of several standard API security practices such as bearer token or basic auth, over a secure (HTTPS) Internet connection.
 
+### Custom Database Action Script exection best practices
+TODO: finish -> borrow points from [this page of Auth0 documentation](https://auth0.com/docs/best-practices/custom-database-connections-scripts/execution)
+
 ### Lab notes
 TODO: transition to the lab, and how it will solidify the concepts covered in the narration
 
