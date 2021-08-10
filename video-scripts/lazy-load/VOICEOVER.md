@@ -29,7 +29,6 @@ Over time all new users, and all active existing users who can successfully auth
 ### Configuring Automatic Migration via the Auth0 web console
 TODO: finish -> borrow points from [this page of Auth0 documentation](https://auth0.com/docs/users/configure-automatic-migration-from-your-database)
 
-
 ### Data flow diagram
 TODO: new DFD that highlights the interactions between auth0 and a legacy auth system as a user is seamlessly / lazily migrated
 
@@ -42,19 +41,24 @@ TODO: finish -> borrow points from [this page of Auth0 documentation](https://au
 ### Lab notes
 TODO: transition to the lab, and how it will solidify the concepts covered in the narration
 
+### Summary
+Automatic user migration is one good choice when your goal is to move (migrate) existing users into Auth0.  Some key advantages of using automatic migration are:
+- users do not need to reset their passwords.  This is especially useful in cases where you cannot export passwords from your legacy auth system (i.e. the format in which passwords are stored is not supported by Auth0).
+- there is no requirement for down time since the process is seamless to users
+- setting up automatic migration via an Auth0 custom database connection is relatively simple to configure and implement using two custom action scripts
+- you can use automatic migration for your 'active users' and then potentially use bulk migration for those that are non-active.  By marking users who have been migrated in your legacy auth system, it becomes clear over time who the active users are, and which non-active users can be migrated using one of the supported mechanisms for bulk migration.
 
-Extra notes (eventually clean up / get rid of)
-- Lazy load video script goes here
-    - what is it?
-    - why & when to use it?
-      - why: no down time for users (seamless experience)
-      - why: no need for users to reset their password (seamless)
-      - why: conceptually simple to implement and test
-      - when: bulk is not an option because user passwords cannot be exported
-      - when: bulk is not an option due to the potential need for legacy system down-time
-    - why not & when not to use it?
-      - why not: <finish>
+Bulk user migration may be a better choice for transitioning to Auth0 if you:
+- need to transition quicly
+- can incur at least some downtime to perform the bulk export / import process
+- can export user passwords either in clear text or in a hashed format [supported by Auth0](https://auth0.com/docs/users/bulk-user-import-database-schema-and-examples).
 
-- Asset ideas:
-  - Data flow diagram (C4 level 4 - DFD) depicting interactions of system actors in a typical lazy load migration implementation
-    - relate to the Lab
+Finally, remember that as alluded to above, neither Automatic nor Bulk user migration are mutually exclusive.
+
+### Knowledge check
+
+Q1: In which circumstances is Automatic migration a good choice for importing users into Auth0 so that it can function as your Identity Provider (IdP)?
+Q2: In which circumstances is Bulk migration a potentially superior choice?
+Q3: Is using Automatic Migration mutually exclusive of using Bulk Migration?
+
+TODO: feedback if/when learner answers incorrectly.
