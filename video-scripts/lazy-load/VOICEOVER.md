@@ -56,9 +56,8 @@ Bulk user migration may be a better choice for transitioning to Auth0 if you:
 Finally, remember that as alluded to above, neither Automatic nor Bulk user migration are mutually exclusive.
 
 ### Knowledge check
-
-Q1: In which circumstances is Automatic migration a good choice for importing users into Auth0 so that it can function as your Identity Provider (IdP)?
-Q2: In which circumstances is Bulk migration a potentially superior choice?
-Q3: Is using Automatic Migration mutually exclusive of using Bulk Migration?
+- In which circumstances is Automatic migration a good choice for importing users into Auth0 so that it can function as your Identity Provider (IdP)?
+- In which circumstances is Bulk migration a potentially superior choice?
+- Is using Automatic Migration mutually exclusive of using Bulk Migration?
 
 TODO: feedback if/when learner answers incorrectly.
